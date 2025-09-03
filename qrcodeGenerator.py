@@ -6,3 +6,10 @@ qr = qrcode.QRCode(
     box_size=10,
     border=5,
 )
+
+data = "https://www.youtube.com/@TechieCoder/playlists"
+
+qr.add_data(data)
+qr.make(fit=True)
+img = qr.make_image(fill='black', back_color='white')
+img.save("test.png")
